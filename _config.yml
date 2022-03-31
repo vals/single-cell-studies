@@ -1,0 +1,7 @@
+title: Single Cell Studies
+author: Valentine Svensson
+logo:
+execute:
+  execute_notebooks: 'off'
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
