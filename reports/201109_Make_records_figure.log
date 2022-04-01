@@ -1,0 +1,94 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+p.options.figure_size = (11, 4)
+
+fig =  (
+    p.ggplot(p.aes(x = 'Date', y = 'Reported cells total'), df)
+    + p.geom_point(color = 'lightgrey')
+    + p.geom_point(size = 2, color = 'black', data = df.query('`Record breaker` == True'))
+    + p.geom_text(
+        p.aes(label = 'Shorthand'),
+        data = df.query('`Record breaker` == True'),
+        size = 8,
+        adjust_text = {
+            'expand_points': (1, 1.1),
+            'expand_text': (1.5, 1.05),
+            'arrowprops': {
+                'arrowstyle': '-',
+                'color': 'black',
+                'lw': 0.5,
+                'zorder': 0
+            },
+            'autoalign': 'y',
+        }
+    )
+    + p.scale_y_log10(breaks = [1e1, 1e2, 1e3, 1e4, 1e5, 1e6], limits = (1, 1e7), labels = comma_format())
+    + p.scale_x_datetime(limits = (datetime(2009, 1, 1), datetime(2022, 3, 1)))
+    + p.theme_minimal()
+    + p.labs(title = 'Cells per study over time', x = 'Publication date')
+)
+
+fig
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mPlotnineError[0m                             Traceback (most recent call last)
+Input [0;32mIn [7][0m, in [0;36m<cell line: 4>[0;34m()[0m
+[1;32m      1[0m p[38;5;241m.[39moptions[38;5;241m.[39mfigure_size [38;5;241m=[39m ([38;5;241m11[39m, [38;5;241m4[39m)
+[1;32m      3[0m fig [38;5;241m=[39m  (
+[1;32m      4[0m     p[38;5;241m.[39mggplot(p[38;5;241m.[39maes(x [38;5;241m=[39m [38;5;124m'[39m[38;5;124mDate[39m[38;5;124m'[39m, y [38;5;241m=[39m [38;5;124m'[39m[38;5;124mReported cells total[39m[38;5;124m'[39m), df)
+[1;32m      5[0m     [38;5;241m+[39m p[38;5;241m.[39mgeom_point(color [38;5;241m=[39m [38;5;124m'[39m[38;5;124mlightgrey[39m[38;5;124m'[39m)
+[1;32m      6[0m     [38;5;241m+[39m p[38;5;241m.[39mgeom_point(size [38;5;241m=[39m [38;5;241m2[39m, color [38;5;241m=[39m [38;5;124m'[39m[38;5;124mblack[39m[38;5;124m'[39m, data [38;5;241m=[39m df[38;5;241m.[39mquery([38;5;124m'[39m[38;5;124m`Record breaker` == True[39m[38;5;124m'[39m))
+[0;32m----> 7[0m     [38;5;241m+[39m [43mp[49m[38;5;241;43m.[39;49m[43mgeom_text[49m[43m([49m
+[1;32m      8[0m [43m        [49m[43mp[49m[38;5;241;43m.[39;49m[43maes[49m[43m([49m[43mlabel[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mShorthand[39;49m[38;5;124;43m'[39;49m[43m)[49m[43m,[49m
+[1;32m      9[0m [43m        [49m[43mdata[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[43mdf[49m[38;5;241;43m.[39;49m[43mquery[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43m`Record breaker` == True[39;49m[38;5;124;43m'[39;49m[43m)[49m[43m,[49m
+[1;32m     10[0m [43m        [49m[43msize[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[38;5;241;43m8[39;49m[43m,[49m
+[1;32m     11[0m [43m        [49m[43madjust_text[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[43m{[49m
+[1;32m     12[0m [43m            [49m[38;5;124;43m'[39;49m[38;5;124;43mexpand_points[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[43m([49m[38;5;241;43m1[39;49m[43m,[49m[43m [49m[38;5;241;43m1.1[39;49m[43m)[49m[43m,[49m
+[1;32m     13[0m [43m            [49m[38;5;124;43m'[39;49m[38;5;124;43mexpand_text[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[43m([49m[38;5;241;43m1.5[39;49m[43m,[49m[43m [49m[38;5;241;43m1.05[39;49m[43m)[49m[43m,[49m
+[1;32m     14[0m [43m            [49m[38;5;124;43m'[39;49m[38;5;124;43marrowprops[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[43m{[49m
+[1;32m     15[0m [43m                [49m[38;5;124;43m'[39;49m[38;5;124;43marrowstyle[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43m-[39;49m[38;5;124;43m'[39;49m[43m,[49m
+[1;32m     16[0m [43m                [49m[38;5;124;43m'[39;49m[38;5;124;43mcolor[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mblack[39;49m[38;5;124;43m'[39;49m[43m,[49m
+[1;32m     17[0m [43m                [49m[38;5;124;43m'[39;49m[38;5;124;43mlw[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[38;5;241;43m0.5[39;49m[43m,[49m
+[1;32m     18[0m [43m                [49m[38;5;124;43m'[39;49m[38;5;124;43mzorder[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[38;5;241;43m0[39;49m
+[1;32m     19[0m [43m            [49m[43m}[49m[43m,[49m
+[1;32m     20[0m [43m            [49m[38;5;124;43m'[39;49m[38;5;124;43mautoalign[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43my[39;49m[38;5;124;43m'[39;49m[43m,[49m
+[1;32m     21[0m [43m        [49m[43m}[49m
+[1;32m     22[0m [43m    [49m[43m)[49m
+[1;32m     23[0m     [38;5;241m+[39m p[38;5;241m.[39mscale_y_log10(breaks [38;5;241m=[39m [[38;5;241m1e1[39m, [38;5;241m1e2[39m, [38;5;241m1e3[39m, [38;5;241m1e4[39m, [38;5;241m1e5[39m, [38;5;241m1e6[39m], limits [38;5;241m=[39m ([38;5;241m1[39m, [38;5;241m1e7[39m), labels [38;5;241m=[39m comma_format())
+[1;32m     24[0m     [38;5;241m+[39m p[38;5;241m.[39mscale_x_datetime(limits [38;5;241m=[39m (datetime([38;5;241m2009[39m, [38;5;241m1[39m, [38;5;241m1[39m), datetime([38;5;241m2022[39m, [38;5;241m3[39m, [38;5;241m1[39m)))
+[1;32m     25[0m     [38;5;241m+[39m p[38;5;241m.[39mtheme_minimal()
+[1;32m     26[0m     [38;5;241m+[39m p[38;5;241m.[39mlabs(title [38;5;241m=[39m [38;5;124m'[39m[38;5;124mCells per study over time[39m[38;5;124m'[39m, x [38;5;241m=[39m [38;5;124m'[39m[38;5;124mPublication date[39m[38;5;124m'[39m)
+[1;32m     27[0m )
+[1;32m     29[0m fig
+
+File [0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/plotnine/geoms/geom_text.py:101[0m, in [0;36mgeom_text.__init__[0;34m(self, mapping, data, **kwargs)[0m
+[1;32m     99[0m         kwargs[[38;5;124m'[39m[38;5;124mposition[39m[38;5;124m'[39m] [38;5;241m=[39m position_nudge([38;5;241m*[39m[38;5;241m*[39mnudge_kwargs)
+[1;32m    100[0m [38;5;28;01melif[39;00m [38;5;129;01mnot[39;00m HAS_ADJUST_TEXT:
+[0;32m--> 101[0m     [38;5;28;01mraise[39;00m PlotnineError(
+[1;32m    102[0m         [38;5;124m"[39m[38;5;124mTo use adjust_text you must install the adjustText [39m[38;5;124m"[39m
+[1;32m    103[0m         [38;5;124m"[39m[38;5;124mpackage.[39m[38;5;124m"[39m
+[1;32m    104[0m     )
+[1;32m    106[0m [38;5;66;03m# Accomodate the old names[39;00m
+[1;32m    107[0m [38;5;28;01mif[39;00m mapping [38;5;129;01mand[39;00m [38;5;124m'[39m[38;5;124mhjust[39m[38;5;124m'[39m [38;5;129;01min[39;00m mapping:
+
+[0;31mPlotnineError[0m: 'To use adjust_text you must install the adjustText package.'
+PlotnineError: 'To use adjust_text you must install the adjustText package.'
+
