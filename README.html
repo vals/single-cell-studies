@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>single-cell-studies &#8212; Single Cell Studies</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example analysis notebook - single cell studies database" href="example_analysis.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Single Cell Studies</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 current">
+  <a class="reference internal" href="#">
+   single-cell-studies
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="example_analysis.html">
+   Example analysis notebook - single cell studies database
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#with-python">
+   With Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#with-r">
+   With R
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-snapshots-with-gsutil">
+   Accessing snapshots with gsutil
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>single-cell-studies</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#with-python">
+   With Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#with-r">
+   With R
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-snapshots-with-gsutil">
+   Accessing snapshots with gsutil
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="single-cell-studies">
+<h1>single-cell-studies<a class="headerlink" href="#single-cell-studies" title="Permalink to this headline">¶</a></h1>
+<p>Notebook with example analysis and code for generating all figures in the manuscript <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">curated</span> <span class="pre">database</span> <span class="pre">reveals</span> <span class="pre">trends</span> <span class="pre">in</span> <span class="pre">single</span> <span class="pre">cell</span> <span class="pre">transcriptomics</span></code>.</p>
+<p>To obtain the data programatically, see instructions for different platforms below:</p>
+<div class="section" id="with-python">
+<h2>With Python<a class="headerlink" href="#with-python" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://nxn.se/single-cell-studies/data.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span>
+                         <span class="n">Shorthand</span>                            <span class="n">DOI</span>                                            <span class="n">Authors</span>  <span class="o">...</span> <span class="n">tSNE</span> <span class="n">H5AD</span> <span class="n">location</span>                   <span class="n">Isolation</span>
+<span class="mi">0</span>             <span class="n">Tietjen</span> <span class="n">et</span> <span class="n">al</span> <span class="n">Neuron</span>  <span class="mf">10.1016</span><span class="o">/</span><span class="n">S0896</span><span class="o">-</span><span class="mi">6273</span><span class="p">(</span><span class="mi">03</span><span class="p">)</span><span class="mi">00229</span><span class="o">-</span><span class="mi">0</span>  <span class="n">Ian</span> <span class="n">Tietjen</span><span class="p">,</span> <span class="n">Jason</span> <span class="n">M</span><span class="o">.</span> <span class="n">Rihel</span><span class="p">,</span> <span class="n">Yanxiang</span> <span class="n">Cao</span><span class="p">,</span> <span class="n">Geo</span><span class="o">...</span>  <span class="o">...</span>  <span class="n">NaN</span>           <span class="n">NaN</span>                 <span class="n">Manual</span><span class="p">,</span> <span class="n">LCM</span>
+<span class="mi">1</span>               <span class="n">Kurimoto</span> <span class="n">et</span> <span class="n">al</span> <span class="n">NAR</span>             <span class="mf">10.1093</span><span class="o">/</span><span class="n">nar</span><span class="o">/</span><span class="n">gkl050</span>                                        <span class="n">K</span><span class="o">.</span> <span class="n">Kurimoto</span>  <span class="o">...</span>  <span class="n">NaN</span>           <span class="n">NaN</span>                         <span class="n">NaN</span>
+<span class="mi">2</span>            <span class="n">Esumi</span> <span class="n">et</span> <span class="n">al</span> <span class="n">NResearch</span>   <span class="mf">10.1016</span><span class="o">/</span><span class="n">j</span><span class="o">.</span><span class="n">neures</span><span class="mf">.2007.12.011</span>  <span class="n">Shigeyuki</span> <span class="n">Esumi</span><span class="p">,</span> <span class="n">Sheng</span><span class="o">-</span><span class="n">Xi</span> <span class="n">Wu</span><span class="p">,</span> <span class="n">Yuchio</span> <span class="n">Yanagawa</span><span class="p">,</span><span class="o">...</span>  <span class="o">...</span>   <span class="n">No</span>           <span class="n">NaN</span>                         <span class="n">NaN</span>
+<span class="mi">3</span>  <span class="n">Subkhankulova</span> <span class="n">et</span> <span class="n">al</span> <span class="n">BMCGenomics</span>        <span class="mf">10.1186</span><span class="o">/</span><span class="mi">1471</span><span class="o">-</span><span class="mi">2164</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">268</span>  <span class="n">Tatiana</span> <span class="n">Subkhankulova</span><span class="p">,</span> <span class="n">Michael</span> <span class="n">J</span> <span class="n">Gilchrist</span><span class="p">,</span> <span class="n">Fr</span><span class="o">...</span>  <span class="o">...</span>  <span class="n">NaN</span>           <span class="n">NaN</span>                         <span class="n">NaN</span>
+<span class="mi">4</span>                 <span class="n">Tang</span> <span class="n">et</span> <span class="n">al</span> <span class="n">NMeth</span>             <span class="mf">10.1038</span><span class="o">/</span><span class="n">NMETH</span><span class="mf">.1315</span>  <span class="n">Fuchou</span> <span class="n">Tang</span><span class="p">,</span> <span class="n">Catalin</span> <span class="n">Barbacioru</span><span class="p">,</span> <span class="n">Yangzhou</span> <span class="n">Wang</span><span class="o">...</span>  <span class="o">...</span>   <span class="n">No</span>           <span class="n">NaN</span>  <span class="n">Pipetting</span> <span class="p">(</span><span class="n">Manual</span> <span class="n">picking</span><span class="p">)</span>
+
+<span class="p">[</span><span class="mi">5</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">25</span> <span class="n">columns</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="with-r">
+<h2>With R<a class="headerlink" href="#with-r" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; library(tidyverse)
+
+&gt; data &lt;- readr::read_delim(&#39;http://www.nxn.se/single-cell-studies/data.tsv&#39;, delim = &#39;\t&#39;)
+Parsed with column specification:
+cols(
+  .default = col_character(),
+  Date = col_double(),
+  `Reported cells total` = col_number(),
+  `Panel size` = col_number(),
+  `Number of reported cell types or clusters` = col_double()
+)
+See spec(...) for full column specifications.
+
+&gt; head(data)
+# A tibble: 6 x 25
+  Shorthand DOI   Authors Journal Title   Date `bioRxiv DOI` `Reported cells… Technique `Data location`
+  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;                    &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;          
+1 Tietjen … 10.1… Ian Ti… Neuron  Sing… 2.00e7 -                           37 PCR       NA             
+2 Kurimoto… 10.1… K. Kur… Nuclei… An i… 2.01e7 -                           20 aRNA amp… GSE4309        
+3 Esumi et… 10.1… Shigey… Neuros… Meth… 2.01e7 -                            8 Super SM… NA             
+4 Subkhank… 10.1… Tatian… BMC Ge… Mode… 2.01e7 -                           12 PCR       NA             
+5 Tang et … 10.1… Fuchou… Nat Me… mRNA… 2.01e7 -                            5 Tang      GSE14605       
+6 Sul et a… 10.1… J.-Y. … Procee… Tran… 2.01e7 -                           48 aRNA amp… NA             
+# … with 15 more variables: `Panel size` &lt;dbl&gt;, Measurement &lt;chr&gt;, Organism &lt;chr&gt;, Tissue &lt;chr&gt;, `Cell
+#   source` &lt;chr&gt;, Contrasts &lt;chr&gt;, `Developmental stage` &lt;chr&gt;, `Number of reported cell types or
+#   clusters` &lt;dbl&gt;, `Cell clustering` &lt;chr&gt;, Pseudotime &lt;chr&gt;, `RNA Velocity` &lt;chr&gt;, PCA &lt;chr&gt;,
+#   tSNE &lt;chr&gt;, `H5AD location` &lt;chr&gt;, Isolation &lt;chr&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-snapshots-with-gsutil">
+<h2>Accessing snapshots with gsutil<a class="headerlink" href="#accessing-snapshots-with-gsutil" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gsutil ls gs://single-cell-studies | tail
+gs://single-cell-studies/data_snapshot_2019-08-06T08:00:00.tsv
+gs://single-cell-studies/data_snapshot_2019-08-07T08:00:01.tsv
+gs://single-cell-studies/data_snapshot_2019-08-10T08:00:04.tsv
+gs://single-cell-studies/data_snapshot_2019-08-11T08:00:01.tsv
+gs://single-cell-studies/data_snapshot_2019-08-12T08:00:06.tsv
+gs://single-cell-studies/data_snapshot_2019-08-13T08:00:01.tsv
+gs://single-cell-studies/data_snapshot_2019-08-14T08:00:06.tsv
+gs://single-cell-studies/data_snapshot_2019-08-15T08:00:00.tsv
+gs://single-cell-studies/data_snapshot_2019-08-16T08:00:01.tsv
+gs://single-cell-studies/data_snapshot_2019-08-17T08:00:01.tsv
+
+$ gsutil cp gs://single-cell-studies/data_snapshot_2019-08-17T08:00:01.tsv .
+Copying gs://single-cell-studies/data_snapshot_2019-08-17T08:00:01.tsv...
+/ [1 files][249.2 KiB/249.2 KiB]
+Operation completed over 1 objects/249.2 KiB.
+
+$ ls
+data_snapshot_2019-08-17T08:00:01.tsv
+</pre></div>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="example_analysis.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Example analysis notebook - single cell studies database</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Valentine Svensson<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
