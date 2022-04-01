@@ -1,5 +1,6 @@
 mizani
 matplotlib
-pandas
 numpy
+openpyxl
+pandas
 plotnine
