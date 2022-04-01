@@ -1,3 +1,4 @@
+adjustText
 mizani
 matplotlib
 numpy
