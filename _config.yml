@@ -5,6 +5,6 @@ execute:
   execute_notebooks: 'off'
 repository:
   url                       : https://github.com/vals/single-cell-studies  # Online location of your book
-  branch                    : gh-pages  # Which branch of the repository should be used when creating links (optional)
+  branch                    : master  # Which branch of the repository should be used when creating links (optional)
 launch_buttons:
   colab_url: "https://colab.research.google.com"
