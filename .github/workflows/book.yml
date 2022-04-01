@@ -1,10 +1,11 @@
 name: deploy-book
 
-# Only run this when the master branch changes
 on:
   push:
     branches:
     - master
+  schedule:
+    - cron: "0 13 * * 1"
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
