@@ -249,7 +249,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1968/1343100101.py:3: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1805/1343100101.py:3: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
 Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
 </pre></div>
 </div>
@@ -324,48 +324,11 @@ Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdo
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">PlotnineError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="nn">Input In [7],</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">p</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">figure_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fig</span> <span class="o">=</span>  <span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">p</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;Reported cells total&#39;</span><span class="p">),</span> <span class="n">df</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">geom_point</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">geom_point</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;`Record breaker` == True&#39;</span><span class="p">))</span>
-<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">geom_text</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="n">p</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Shorthand&#39;</span><span class="p">),</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;`Record breaker` == True&#39;</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="n">size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>         <span class="n">adjust_text</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>             <span class="s1">&#39;expand_points&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>             <span class="s1">&#39;expand_text&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>             <span class="s1">&#39;arrowprops&#39;</span><span class="p">:</span> <span class="p">{</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>                 <span class="s1">&#39;arrowstyle&#39;</span><span class="p">:</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>                 <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>                 <span class="s1">&#39;lw&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>                 <span class="s1">&#39;zorder&#39;</span><span class="p">:</span> <span class="mi">0</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>             <span class="p">},</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>             <span class="s1">&#39;autoalign&#39;</span><span class="p">:</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>         <span class="p">}</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">scale_y_log10</span><span class="p">(</span><span class="n">breaks</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1e1</span><span class="p">,</span> <span class="mf">1e2</span><span class="p">,</span> <span class="mf">1e3</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">,</span> <span class="mf">1e5</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">],</span> <span class="n">limits</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1e7</span><span class="p">),</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">comma_format</span><span class="p">())</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">scale_x_datetime</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2009</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">theme_minimal</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">labs</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Cells per study over time&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Publication date&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="n">fig</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/plotnine/geoms/geom_text.py:101,</span> in <span class="ni">geom_text.__init__</span><span class="nt">(self, mapping, data, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span>         <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">position_nudge</span><span class="p">(</span><span class="o">**</span><span class="n">nudge_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">100</span> <span class="k">elif</span> <span class="ow">not</span> <span class="n">HAS_ADJUST_TEXT</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">101</span>     <span class="k">raise</span> <span class="n">PlotnineError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">102</span>         <span class="s2">&quot;To use adjust_text you must install the adjustText &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">103</span>         <span class="s2">&quot;package.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">106</span> <span class="c1"># Accomodate the old names</span>
-<span class="g g-Whitespace">    </span><span class="mi">107</span> <span class="k">if</span> <span class="n">mapping</span> <span class="ow">and</span> <span class="s1">&#39;hjust&#39;</span> <span class="ow">in</span> <span class="n">mapping</span><span class="p">:</span>
-
-<span class="ne">PlotnineError</span>: &#39;To use adjust_text you must install the adjustText package.&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_point : Removed 311 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/201109_Make_records_figure_8_1.png" src="_images/201109_Make_records_figure_8_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8789979869949)&gt;
 </pre></div>
 </div>
 </div>
