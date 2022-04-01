@@ -2,7 +2,7 @@ title: Single Cell Studies
 author: Valentine Svensson
 logo:
 execute:
-  execute_notebooks: 'off'
+  execute_notebooks: force
 repository:
   url                       : https://github.com/vals/single-cell-studies  # Online location of your book
   branch                    : master  # Which branch of the repository should be used when creating links (optional)
