@@ -385,14 +385,22 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>findfont: Font family [&#39;Arial&#39;] not found. Falling back to DejaVu Sans.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>findfont: Font family [&#39;Arial&#39;] not found. Falling back to DejaVu Sans.
-</pre></div>
-</div>
-<img alt="_images/example_analysis_3_2.png" src="_images/example_analysis_3_2.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># plot number of studies over time</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">p</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">figure_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fig</span> <span class="o">=</span> <span class="p">(</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">p</span><span class="o">.</span><span class="n">ggplot</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;DOI&#39;</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;1M&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()[[</span><span class="s1">&#39;DOI&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s1">&#39;identity&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">theme_minimal</span><span class="p">(</span><span class="n">base_family</span><span class="o">=</span><span class="s1">&#39;Arial&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">scale_x_datetime</span><span class="p">(</span><span class="n">breaks</span><span class="o">=</span><span class="n">date_breaks</span><span class="p">(</span><span class="s1">&#39;1 years&#39;</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="n">date_format</span><span class="p">(</span><span class="s1">&#39;%Y&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">labs</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Number of studies&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">fig</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;studies_over_time.pdf&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="nb">print</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: __init__() got multiple values for argument &#39;data&#39;
 </pre></div>
 </div>
 </div>
@@ -410,10 +418,10 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Chromium&#39;: &#39;Chromium&#39;,
- &#39;Smart-seq2&#39;: &#39;Smart-seq2&#39;,
- &#39;SMARTer (C1)&#39;: &#39;SMARTer (C1)&#39;,
  &#39;Drop-seq&#39;: &#39;Drop-seq&#39;,
- &#39;SMARTer&#39;: &#39;SMARTer&#39;}
+ &#39;InDrops&#39;: &#39;InDrops&#39;,
+ &#39;SMARTer (C1)&#39;: &#39;SMARTer (C1)&#39;,
+ &#39;Smart-seq2&#39;: &#39;Smart-seq2&#39;}
 </pre></div>
 </div>
 </div>
@@ -496,7 +504,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_8_0.png" src="_images/example_analysis_8_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772950271979)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (-9223363289799617820)&gt;
 </pre></div>
 </div>
 </div>
@@ -543,7 +551,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <img alt="_images/example_analysis_10_1.png" src="_images/example_analysis_10_1.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772950118494)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8747055176077)&gt;
 </pre></div>
 </div>
 </div>
@@ -555,8 +563,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yes    0.912134
-No     0.087866
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yes    0.897361
+No     0.102639
 Name: Cell clustering, dtype: float64
 </pre></div>
 </div>
@@ -598,7 +606,7 @@ Name: Cell clustering, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_12_0.png" src="_images/example_analysis_12_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772950002183)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (-9223363289799778209)&gt;
 </pre></div>
 </div>
 </div>
@@ -639,7 +647,7 @@ Name: Cell clustering, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_13_0.png" src="_images/example_analysis_13_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772949948898)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (-9223363289799888903)&gt;
 </pre></div>
 </div>
 </div>
@@ -680,7 +688,7 @@ Name: Cell clustering, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_16_0.png" src="_images/example_analysis_16_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772950171871)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (-9223363289799740556)&gt;
 </pre></div>
 </div>
 </div>
@@ -744,17 +752,17 @@ Name: Cell clustering, dtype: float64
     <tr>
       <th>2</th>
       <td>2004</td>
-      <td>0.781184</td>
+      <td>1.119715</td>
     </tr>
     <tr>
       <th>3</th>
       <td>2005</td>
-      <td>3.280252</td>
+      <td>2.583825</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2006</td>
-      <td>6.382453</td>
+      <td>5.271610</td>
     </tr>
     <tr>
       <th>5</th>
@@ -764,77 +772,67 @@ Name: Cell clustering, dtype: float64
     <tr>
       <th>6</th>
       <td>2008</td>
-      <td>4.609732</td>
+      <td>3.985924</td>
     </tr>
     <tr>
       <th>7</th>
       <td>2009</td>
-      <td>1.971059</td>
+      <td>1.805004</td>
     </tr>
     <tr>
       <th>8</th>
       <td>2010</td>
-      <td>10.179891</td>
+      <td>9.624041</td>
     </tr>
     <tr>
       <th>9</th>
       <td>2011</td>
-      <td>12.736172</td>
+      <td>12.119113</td>
     </tr>
     <tr>
       <th>10</th>
       <td>2012</td>
-      <td>5.281293</td>
+      <td>4.170681</td>
     </tr>
     <tr>
       <th>11</th>
       <td>2013</td>
-      <td>8.969883</td>
+      <td>7.963570</td>
     </tr>
     <tr>
       <th>12</th>
       <td>2014</td>
-      <td>13.103978</td>
+      <td>12.268957</td>
     </tr>
     <tr>
       <th>13</th>
       <td>2015</td>
-      <td>9.772672</td>
+      <td>9.730522</td>
     </tr>
     <tr>
       <th>14</th>
       <td>2016</td>
-      <td>14.174734</td>
+      <td>14.082149</td>
     </tr>
     <tr>
       <th>15</th>
       <td>2017</td>
-      <td>17.410062</td>
+      <td>17.531507</td>
     </tr>
     <tr>
       <th>16</th>
       <td>2018</td>
-      <td>13.156136</td>
+      <td>14.539674</td>
     </tr>
     <tr>
       <th>17</th>
       <td>2019</td>
-      <td>16.272265</td>
+      <td>14.759696</td>
     </tr>
     <tr>
       <th>18</th>
       <td>2020</td>
-      <td>18.603195</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2021</td>
-      <td>46.637914</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2022</td>
-      <td>58.238266</td>
+      <td>15.051003</td>
     </tr>
   </tbody>
 </table>
@@ -854,7 +852,7 @@ Name: Cell clustering, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_19_0.png" src="_images/example_analysis_19_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772950118593)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8747054448823)&gt;
 </pre></div>
 </div>
 </div>
@@ -883,7 +881,7 @@ Name: Cell clustering, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_21_0.png" src="_images/example_analysis_21_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772950003402)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (-9223363289800382776)&gt;
 </pre></div>
 </div>
 </div>
@@ -930,37 +928,37 @@ Name: Cell clustering, dtype: float64
     <tr>
       <th>0</th>
       <td>bioRxiv</td>
-      <td>194</td>
+      <td>136</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Nat Commun</td>
-      <td>125</td>
+      <td>Nature</td>
+      <td>82</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Cell</td>
-      <td>117</td>
+      <td>73</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Nature</td>
-      <td>108</td>
+      <td>Nat Commun</td>
+      <td>71</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Cell Reports</td>
-      <td>94</td>
+      <td>66</td>
     </tr>
     <tr>
       <th>5</th>
       <td>Science</td>
-      <td>68</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Nat Immunol</td>
-      <td>36</td>
+      <td>Cell Stem Cell</td>
+      <td>28</td>
     </tr>
   </tbody>
 </table>
@@ -1009,37 +1007,37 @@ Name: Cell clustering, dtype: float64
     <tr>
       <th>0</th>
       <td>Brain</td>
-      <td>249</td>
+      <td>171</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Culture</td>
-      <td>184</td>
+      <td>107</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Blood</td>
-      <td>83</td>
+      <td>35</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Lung</td>
-      <td>47</td>
+      <td>Pancreas</td>
+      <td>33</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Bone marrow</td>
-      <td>43</td>
+      <td>Lung</td>
+      <td>32</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Pancreas</td>
-      <td>38</td>
+      <td>Heart</td>
+      <td>25</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Heart</td>
-      <td>37</td>
+      <td>Bone marrow</td>
+      <td>22</td>
     </tr>
   </tbody>
 </table>
@@ -1058,11 +1056,11 @@ Name: Cell clustering, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unknown    809
-No         420
-Yes        401
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No         415
+Unknown    366
+Yes        254
 Name: did_bioRxiv, dtype: int64
-Fraction of studies in biorxiv: 0.2460122699386503
+Fraction of studies in biorxiv: 0.24541062801932367
 </pre></div>
 </div>
 </div>
@@ -1113,7 +1111,7 @@ Fraction of studies in biorxiv: 0.2460122699386503
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_26_0.png" src="_images/example_analysis_26_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772950396531)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8747054437054)&gt;
 </pre></div>
 </div>
 </div>
@@ -1130,11 +1128,11 @@ Fraction of studies in biorxiv: 0.2460122699386503
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unknown    809
-No         420
-Yes        401
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No         415
+Unknown    365
+Yes        254
 Name: did_bioRxiv, dtype: int64
-Fraction of studies in biorxiv: 0.2460122699386503
+Fraction of studies in biorxiv: 0.24564796905222436
 </pre></div>
 </div>
 </div>
@@ -1184,64 +1182,64 @@ Fraction of studies in biorxiv: 0.2460122699386503
   </thead>
   <tbody>
     <tr>
-      <th>2022-04-30</th>
-      <td>6.0</td>
-      <td>0.0</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>2022-03-31</th>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>2022-02-28</th>
-      <td>9.0</td>
-      <td>0.0</td>
-      <td>13.0</td>
-    </tr>
-    <tr>
-      <th>2022-01-31</th>
-      <td>8.0</td>
-      <td>0.0</td>
-      <td>22.0</td>
-    </tr>
-    <tr>
-      <th>2021-12-31</th>
+      <th>2020-06-30</th>
       <td>3.0</td>
       <td>0.0</td>
-      <td>6.0</td>
+      <td>3.0</td>
     </tr>
     <tr>
-      <th>2021-11-30</th>
+      <th>2020-05-31</th>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>2020-04-30</th>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>2020-03-31</th>
+      <td>14.0</td>
+      <td>0.0</td>
+      <td>55.0</td>
+    </tr>
+    <tr>
+      <th>2020-02-29</th>
+      <td>10.0</td>
+      <td>2.0</td>
+      <td>46.0</td>
+    </tr>
+    <tr>
+      <th>2020-01-31</th>
+      <td>17.0</td>
+      <td>1.0</td>
+      <td>39.0</td>
+    </tr>
+    <tr>
+      <th>2019-12-31</th>
+      <td>19.0</td>
+      <td>1.0</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <th>2019-11-30</th>
+      <td>5.0</td>
+      <td>0.0</td>
       <td>7.0</td>
+    </tr>
+    <tr>
+      <th>2019-10-31</th>
+      <td>6.0</td>
       <td>0.0</td>
       <td>18.0</td>
     </tr>
     <tr>
-      <th>2021-10-31</th>
-      <td>20.0</td>
+      <th>2019-09-30</th>
+      <td>13.0</td>
       <td>0.0</td>
-      <td>15.0</td>
-    </tr>
-    <tr>
-      <th>2021-09-30</th>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>2021-08-31</th>
-      <td>7.0</td>
-      <td>0.0</td>
-      <td>16.0</td>
-    </tr>
-    <tr>
-      <th>2021-07-31</th>
-      <td>11.0</td>
-      <td>0.0</td>
-      <td>19.0</td>
+      <td>10.0</td>
     </tr>
   </tbody>
 </table>
@@ -1291,7 +1289,7 @@ Fraction of studies in biorxiv: 0.2460122699386503
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_31_0.png" src="_images/example_analysis_31_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772949840246)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8747054344354)&gt;
 </pre></div>
 </div>
 </div>
@@ -1346,7 +1344,7 @@ Fraction of studies in biorxiv: 0.2460122699386503
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_34_0.png" src="_images/example_analysis_34_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772949890497)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (-9223363289799731403)&gt;
 </pre></div>
 </div>
 </div>
@@ -1395,38 +1393,38 @@ Fraction of studies in biorxiv: 0.2460122699386503
   <tbody>
     <tr>
       <th>0</th>
-      <td>2021-09-30</td>
-      <td>47262</td>
+      <td>2019-11-30</td>
+      <td>39895</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2021-10-31</td>
-      <td>39657</td>
+      <td>2019-12-31</td>
+      <td>15601</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2021-11-30</td>
-      <td>51656</td>
+      <td>2020-01-31</td>
+      <td>35173</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2021-12-31</td>
-      <td>56412</td>
+      <td>2020-02-29</td>
+      <td>36044</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2022-01-31</td>
-      <td>33197</td>
+      <td>2020-03-31</td>
+      <td>31514</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>2022-02-28</td>
-      <td>37397</td>
+      <td>2020-04-30</td>
+      <td>30396</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>2022-03-31</td>
-      <td>57467</td>
+      <td>2020-05-31</td>
+      <td>22000</td>
     </tr>
   </tbody>
 </table>
@@ -1475,38 +1473,38 @@ Fraction of studies in biorxiv: 0.2460122699386503
   <tbody>
     <tr>
       <th>0</th>
-      <td>2021-09-30</td>
-      <td>8</td>
+      <td>2019-11-30</td>
+      <td>12</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2021-10-31</td>
-      <td>28</td>
+      <td>2019-12-31</td>
+      <td>29</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2021-11-30</td>
-      <td>22</td>
+      <td>2020-01-31</td>
+      <td>57</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2021-12-31</td>
-      <td>9</td>
+      <td>2020-02-29</td>
+      <td>50</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2022-01-31</td>
-      <td>28</td>
+      <td>2020-03-31</td>
+      <td>68</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>2022-02-28</td>
-      <td>21</td>
+      <td>2020-04-30</td>
+      <td>38</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>2022-03-31</td>
-      <td>12</td>
+      <td>2020-05-31</td>
+      <td>13</td>
     </tr>
   </tbody>
 </table>
@@ -1553,45 +1551,45 @@ Fraction of studies in biorxiv: 0.2460122699386503
   <tbody>
     <tr>
       <th>0</th>
-      <td>September 2021</td>
-      <td>8</td>
-      <td>47262</td>
+      <td>November 2019</td>
+      <td>12</td>
+      <td>39895</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>October 2021</td>
-      <td>28</td>
-      <td>39657</td>
+      <td>December 2019</td>
+      <td>29</td>
+      <td>15601</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>November 2021</td>
-      <td>22</td>
-      <td>51656</td>
+      <td>January 2020</td>
+      <td>57</td>
+      <td>35173</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>December 2021</td>
-      <td>9</td>
-      <td>56412</td>
+      <td>February 2020</td>
+      <td>50</td>
+      <td>36044</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>January 2022</td>
-      <td>28</td>
-      <td>33197</td>
+      <td>March 2020</td>
+      <td>68</td>
+      <td>31514</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>February 2022</td>
-      <td>21</td>
-      <td>37397</td>
+      <td>April 2020</td>
+      <td>38</td>
+      <td>30396</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>March 2022</td>
-      <td>12</td>
-      <td>57467</td>
+      <td>May 2020</td>
+      <td>13</td>
+      <td>22000</td>
     </tr>
   </tbody>
 </table>
@@ -1647,73 +1645,73 @@ Fraction of studies in biorxiv: 0.2460122699386503
   <tbody>
     <tr>
       <th>0</th>
-      <td>September 2021</td>
-      <td>8</td>
-      <td>47262</td>
+      <td>November 2019</td>
+      <td>12</td>
+      <td>39895</td>
       <td>Brain</td>
-      <td>249</td>
+      <td>171</td>
       <td>bioRxiv</td>
-      <td>194</td>
+      <td>136</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>October 2021</td>
-      <td>28</td>
-      <td>39657</td>
+      <td>December 2019</td>
+      <td>29</td>
+      <td>15601</td>
       <td>Culture</td>
-      <td>184</td>
-      <td>Nat Commun</td>
-      <td>125</td>
+      <td>107</td>
+      <td>Nature</td>
+      <td>82</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>November 2021</td>
-      <td>22</td>
-      <td>51656</td>
+      <td>January 2020</td>
+      <td>57</td>
+      <td>35173</td>
       <td>Blood</td>
-      <td>83</td>
+      <td>35</td>
       <td>Cell</td>
-      <td>117</td>
+      <td>73</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>December 2021</td>
-      <td>9</td>
-      <td>56412</td>
-      <td>Lung</td>
-      <td>47</td>
-      <td>Nature</td>
-      <td>108</td>
+      <td>February 2020</td>
+      <td>50</td>
+      <td>36044</td>
+      <td>Pancreas</td>
+      <td>33</td>
+      <td>Nat Commun</td>
+      <td>71</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>January 2022</td>
-      <td>28</td>
-      <td>33197</td>
-      <td>Bone marrow</td>
-      <td>43</td>
+      <td>March 2020</td>
+      <td>68</td>
+      <td>31514</td>
+      <td>Lung</td>
+      <td>32</td>
       <td>Cell Reports</td>
-      <td>94</td>
+      <td>66</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>February 2022</td>
-      <td>21</td>
-      <td>37397</td>
-      <td>Pancreas</td>
+      <td>April 2020</td>
       <td>38</td>
+      <td>30396</td>
+      <td>Heart</td>
+      <td>25</td>
       <td>Science</td>
-      <td>68</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>March 2022</td>
-      <td>12</td>
-      <td>57467</td>
-      <td>Heart</td>
-      <td>37</td>
-      <td>Nat Immunol</td>
-      <td>36</td>
+      <td>May 2020</td>
+      <td>13</td>
+      <td>22000</td>
+      <td>Bone marrow</td>
+      <td>22</td>
+      <td>Cell Stem Cell</td>
+      <td>28</td>
     </tr>
   </tbody>
 </table>
@@ -1726,7 +1724,7 @@ Fraction of studies in biorxiv: 0.2460122699386503
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1630, 30)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1035, 29)
 </pre></div>
 </div>
 </div>
@@ -1739,9 +1737,8 @@ Fraction of studies in biorxiv: 0.2460122699386503
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reported cells total                         22514.0
-Number of reported cell types or clusters       14.0
-Number individuals                              14.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reported cells total                         17800.0
+Number of reported cell types or clusters       13.0
 dtype: float64
 </pre></div>
 </div>
@@ -1775,57 +1772,48 @@ dtype: float64
       <th></th>
       <th>Reported cells total</th>
       <th>Number of reported cell types or clusters</th>
-      <th>Number individuals</th>
     </tr>
     <tr>
       <th>Date</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>2021-09-30</th>
-      <td>47262.0</td>
-      <td>30.0</td>
-      <td>NaN</td>
+      <th>2019-11-30</th>
+      <td>39895.5</td>
+      <td>15.0</td>
     </tr>
     <tr>
-      <th>2021-10-31</th>
-      <td>39657.0</td>
-      <td>11.0</td>
-      <td>10.5</td>
+      <th>2019-12-31</th>
+      <td>15601.0</td>
+      <td>16.0</td>
     </tr>
     <tr>
-      <th>2021-11-30</th>
-      <td>51656.5</td>
-      <td>18.0</td>
-      <td>18.0</td>
+      <th>2020-01-31</th>
+      <td>35173.0</td>
+      <td>8.5</td>
     </tr>
     <tr>
-      <th>2021-12-31</th>
-      <td>56412.0</td>
-      <td>381.0</td>
-      <td>29.0</td>
+      <th>2020-02-29</th>
+      <td>36044.0</td>
+      <td>17.0</td>
     </tr>
     <tr>
-      <th>2022-01-31</th>
-      <td>33197.0</td>
-      <td>8.0</td>
-      <td>8.0</td>
+      <th>2020-03-31</th>
+      <td>31514.0</td>
+      <td>15.0</td>
     </tr>
     <tr>
-      <th>2022-02-28</th>
-      <td>37397.0</td>
-      <td>18.0</td>
-      <td>7.5</td>
+      <th>2020-04-30</th>
+      <td>30396.0</td>
+      <td>17.0</td>
     </tr>
     <tr>
-      <th>2022-03-31</th>
-      <td>57467.0</td>
-      <td>NaN</td>
-      <td>12.0</td>
+      <th>2020-05-31</th>
+      <td>22000.0</td>
+      <td>20.5</td>
     </tr>
   </tbody>
 </table>
@@ -1845,7 +1833,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reported cells total    1114798.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reported cells total    1355585.0
 dtype: float64
 </pre></div>
 </div>
@@ -1871,7 +1859,7 @@ dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_45_0.png" src="_images/example_analysis_45_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772945116154)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8747051959609)&gt;
 </pre></div>
 </div>
 </div>
@@ -1883,7 +1871,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49433519.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7739200.0
 </pre></div>
 </div>
 </div>
@@ -1907,7 +1895,7 @@ dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_47_0.png" src="_images/example_analysis_47_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772945121841)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8747055002716)&gt;
 </pre></div>
 </div>
 </div>
@@ -1938,113 +1926,113 @@ dtype: float64
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>1625</th>
-      <th>1626</th>
-      <th>1627</th>
-      <th>1628</th>
-      <th>1629</th>
+      <th>1030</th>
+      <th>1031</th>
+      <th>1032</th>
+      <th>1033</th>
+      <th>1034</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Shorthand</th>
-      <td>Borcherding et al BAdvances</td>
-      <td>Macnair et al bioRxiv</td>
-      <td>Karlsson et al bioRxiv</td>
-      <td>Fei et al RSquare</td>
-      <td>Omata et al JBMRP</td>
+      <td>Zhang et al bioRxiv</td>
+      <td>Niederriter Shami et al DCell</td>
+      <td>He et al bioRxiv</td>
+      <td>Le et al Immunity</td>
+      <td>Fischer et al</td>
     </tr>
     <tr>
       <th>DOI</th>
-      <td>10.1182/bloodadvances.2021005991</td>
-      <td>10.1101/2022.04.06.487263</td>
-      <td>10.1101/2022.04.09.487529</td>
-      <td>10.21203/rs.3.rs-1544600/v1</td>
-      <td>10.1002/jbm4.10631</td>
+      <td>10.1101/2020.06.04.105700</td>
+      <td>10.1016/j.devcel.2020.05.010</td>
+      <td>10.1101/2020.06.14.150599</td>
+      <td>10.1016/j.immuni.2020.05.010</td>
+      <td>10.1038/s41467-020-16893-3</td>
     </tr>
     <tr>
       <th>Authors</th>
-      <td>Nicholas Borcherding, Kevin J Severson, Nichol...</td>
-      <td>Will Macnair, Daniela Calini, Eneritz Agirre, ...</td>
-      <td>Kasper Karlsson, Moritz Przybilla, Hang Xu, Er...</td>
-      <td>Lijiang Fei, Haide Chen, Lifeng Ma, Weigao E, ...</td>
-      <td>Yasunori Omata, Hiroyuki Okada, Steffen Uebe, ...</td>
+      <td>Meng Zhang, Stephen W. Eichhorn, Brian Zingg, ...</td>
+      <td>Adrienne Niederriter Shami, Xianing Zheng, Sar...</td>
+      <td>Peng He, Brian A Williams, Diane Trout, Georgi...</td>
+      <td>Justin Le, Jeong Eun Park, Vi Luan Ha, Annie L...</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>Journal</th>
-      <td>Blood Advances</td>
       <td>bioRxiv</td>
+      <td>Developmental Cell</td>
       <td>bioRxiv</td>
-      <td>RSquare</td>
-      <td>JBMR Plus</td>
+      <td>Immunity</td>
+      <td>Nat Commun</td>
     </tr>
     <tr>
       <th>Title</th>
-      <td>Single-cell analysis of Sézary syndrome reveal...</td>
-      <td>Single nuclei RNAseq stratifies multiple scler...</td>
-      <td>Experimental evolution in &lt;i&gt;TP53&lt;/i&gt; deficien...</td>
-      <td>Systematic identification of cell fate regulat...</td>
-      <td>Interspecies Single‐Cell &lt;scp&gt;RNA&lt;/scp&gt; ‐Seq A...</td>
+      <td>Molecular, spatial and projection diversity of...</td>
+      <td>Single-Cell RNA Sequencing of Human, Macaque, ...</td>
+      <td>The changing mouse embryo transcriptome at who...</td>
+      <td>Single-Cell RNA-Seq Mapping of Human Thymopoie...</td>
+      <td>Post-surgical adhesions are triggered by calci...</td>
     </tr>
     <tr>
       <th>Date</th>
-      <td>2022-04-07 00:00:00</td>
-      <td>2022-04-10 00:00:00</td>
-      <td>2022-04-11 00:00:00</td>
-      <td>2022-04-11 00:00:00</td>
-      <td>2022-04-19 00:00:00</td>
+      <td>2020-06-05 00:00:00</td>
+      <td>2020-06-05 00:00:00</td>
+      <td>2020-06-15 00:00:00</td>
+      <td>2020-06-16 00:00:00</td>
+      <td>NaT</td>
     </tr>
     <tr>
       <th>bioRxiv DOI</th>
+      <td>10.1101/2020.06.04.105700</td>
       <td>NaN</td>
-      <td>10.1101/2022.04.06.487263</td>
-      <td>10.1101/2022.04.09.487529</td>
-      <td>10.21203/rs.3.rs-1544600/v1</td>
+      <td>10.1101/2020.06.14.150599</td>
+      <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>Reported cells total</th>
-      <td>50000.0</td>
-      <td>740000.0</td>
-      <td>31606.0</td>
-      <td>520801.0</td>
-      <td>8702.0</td>
+      <td>300000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>Organism</th>
-      <td>Human</td>
-      <td>Human</td>
-      <td>Human</td>
       <td>Mouse</td>
-      <td>Human, Mouse</td>
+      <td>Human, Macaque, Mouse</td>
+      <td>Mouse</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>Tissue</th>
-      <td>Blood, Tumor</td>
       <td>Brain</td>
-      <td>Culture</td>
-      <td>Brain, Heart, Intestine, Kidney, Liver, Lung, ...</td>
-      <td>Blood, Bone marrow</td>
+      <td>Testes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>Technique</th>
+      <td>MERFISH</td>
       <td>NaN</td>
-      <td>Chromium</td>
-      <td>Chromium</td>
-      <td>Microwell-seq</td>
-      <td>Chromium</td>
+      <td>Chromium &amp; Smart-seq2</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>Data location</th>
+      <td>ftp://download.brainimagelibrary.org:8811/02/2...</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>https://doi.org/10.5281/zenodo.6401895</td>
-      <td>GSE178217</td>
+      <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>Panel size</th>
-      <td>NaN</td>
+      <td>118</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -2052,24 +2040,24 @@ dtype: float64
     </tr>
     <tr>
       <th>Measurement</th>
+      <td>In Situ</td>
       <td>RNA-seq</td>
       <td>RNA-seq</td>
-      <td>RNA-seq</td>
-      <td>RNA-seq</td>
-      <td>RNA-seq</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>Cell source</th>
-      <td>T cells</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>Differentiated into osteoclasts</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>Disease</th>
       <td>NaN</td>
-      <td>Multiple sclerosis</td>
+      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -2087,16 +2075,16 @@ dtype: float64
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>E10.5, E12.5</td>
+      <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>Number of reported cell types or clusters</th>
+      <td>95</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>11.0</td>
     </tr>
     <tr>
       <th>Cell clustering</th>
@@ -2109,7 +2097,7 @@ dtype: float64
     <tr>
       <th>Pseudotime</th>
       <td>NaN</td>
-      <td>NaN</td>
+      <td>Yes</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -2163,28 +2151,20 @@ dtype: float64
       <td>NaN</td>
     </tr>
     <tr>
-      <th>Number individuals</th>
-      <td>NaN</td>
-      <td>83.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
       <th>did_bioRxiv</th>
+      <td>Yes</td>
       <td>Unknown</td>
       <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
+      <td>Unknown</td>
       <td>Unknown</td>
     </tr>
     <tr>
       <th>Tech</th>
       <td>Other</td>
-      <td>Chromium</td>
-      <td>Chromium</td>
       <td>Other</td>
-      <td>Chromium</td>
+      <td>Other</td>
+      <td>Other</td>
+      <td>Other</td>
     </tr>
   </tbody>
 </table>
@@ -2222,11 +2202,11 @@ dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data_scale
-(0.3, 2.924]       235.824576
-(2.924, 3.722]     682.660882
-(3.722, 4.264]    3596.309909
-(4.264, 4.738]    4232.802700
-(4.738, 6.609]    5517.574856
+(0.3, 2.606]        153.298134
+(2.606, 3.441]      210.756797
+(3.441, 4.063]     8100.666657
+(4.063, 4.568]    13892.320871
+(4.568, 6.402]     3333.339182
 dtype: float64
 </pre></div>
 </div>
@@ -2260,7 +2240,7 @@ dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_53_0.png" src="_images/example_analysis_53_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772949889558)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8747054773105)&gt;
 </pre></div>
 </div>
 </div>
@@ -2308,7 +2288,7 @@ dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_56_0.png" src="_images/example_analysis_56_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772950152753)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (-9223363289800396572)&gt;
 </pre></div>
 </div>
 </div>
@@ -2327,18 +2307,18 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Other          1014
-Brain           249
-Blood            83
-Lung             47
-Bone marrow      43
-Pancreas         38
-Heart            37
-Skin             28
-Kidney           27
-Liver            22
-Spleen           21
-Eye              21
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Other          638
+Brain          171
+Blood           35
+Pancreas        33
+Lung            32
+Heart           25
+Bone marrow     22
+Skin            19
+Kidney          19
+Spleen          18
+Testis          12
+Eye             11
 Name: Tissue_, dtype: int64
 </pre></div>
 </div>
@@ -2373,7 +2353,7 @@ Name: Tissue_, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/example_analysis_60_0.png" src="_images/example_analysis_60_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8772944966723)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8747055166244)&gt;
 </pre></div>
 </div>
 </div>
@@ -2398,15 +2378,15 @@ Name: Tissue_, dtype: int64
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tissue_
 Brain           True
-Blood           True
-Lung            True
-Bone marrow     True
+Blood          False
 Pancreas        True
+Lung            True
 Heart           True
+Bone marrow    False
 Skin           False
 Kidney         False
-Liver          False
 Spleen          True
+Testis          True
 Eye             True
 Other           True
 dtype: bool
