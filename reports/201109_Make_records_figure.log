@@ -17,39 +17,24 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# %pylab inline
-# %config InlineBackend.figure_format = 'retina'
-
-import io
-
-import matplotlib.font_manager
-from mizani.breaks import date_breaks
-from mizani.formatters import date_format
-
-# Only pandas >= v0.25.0 supports column names with spaces in queries
+from mizani.formatters import comma_format
 import pandas as pd
-ts = pd.Timestamp  # Alias for pd.Timestamp
 import plotnine as p
-import requests
-import numpy as np
-import statsmodels.api as sm
-import statsmodels.formula.api as smf
 
-import warnings
-import matplotlib.colors as mplcol
-import colorsys
+%pylab inline
+# %config InlineBackend.figure_formats = ['retina']
 
-warnings.filterwarnings("ignore")  # plotnine has a lot of MatplotlibDeprecationWarning's
+from datetime import datetime
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn [1], line 13[0m
-[1;32m     11[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
-[1;32m     12[0m ts [38;5;241m=[39m pd[38;5;241m.[39mTimestamp  [38;5;66;03m# Alias for pd.Timestamp[39;00m
-[0;32m---> 13[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotnine[39;00m [38;5;28;01mas[39;00m [38;5;21;01mp[39;00m
-[1;32m     14[0m [38;5;28;01mimport[39;00m [38;5;21;01mrequests[39;00m
-[1;32m     15[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+Cell [0;32mIn [1], line 3[0m
+[1;32m      1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmizani[39;00m[38;5;21;01m.[39;00m[38;5;21;01mformatters[39;00m [38;5;28;01mimport[39;00m comma_format
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[0;32m----> 3[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotnine[39;00m [38;5;28;01mas[39;00m [38;5;21;01mp[39;00m
+[1;32m      5[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124mpylab[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124minline[39m[38;5;124m'[39m)
+[1;32m      6[0m [38;5;66;03m# %config InlineBackend.figure_formats = ['retina'][39;00m
 
 File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/plotnine/__init__.py:1[0m
 [0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mqplot[39;00m [38;5;28;01mimport[39;00m qplot            [38;5;66;03m# noqa: F401[39;00m
