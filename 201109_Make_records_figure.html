@@ -325,13 +325,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>data = pd.read_csv(&#39;https://nxn.se/single-cell-studies/data.tsv&#39;, sep=&#39;\t&#39;)
 data[&#39;Date&#39;] = data[&#39;Date&#39;].pipe(pd.to_datetime, format=&#39;%Y%m%d&#39;)
-data[&#39;Reported cells total&#39;] = data[&#39;Reported cells total&#39;].str.replace(&#39;,&#39;, &#39;&#39;).map(np.float)
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1809/231977365.py:3: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
-Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+data[&#39;Reported cells total&#39;] = data[&#39;Reported cells total&#39;].str.replace(&#39;,&#39;, &#39;&#39;).map(float)
 </pre></div>
 </div>
 </div>
@@ -365,7 +359,590 @@ for n, row in df.iterrows():
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.query(&#39;`Record breaker` == True&#39;);
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>display(df.query(&#39;`Record breaker` == True&#39;));
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Shorthand</th>
+      <th>DOI</th>
+      <th>Authors</th>
+      <th>Journal</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>bioRxiv DOI</th>
+      <th>Reported cells total</th>
+      <th>Organism</th>
+      <th>Tissue</th>
+      <th>...</th>
+      <th>Cell clustering</th>
+      <th>Pseudotime</th>
+      <th>RNA Velocity</th>
+      <th>PCA</th>
+      <th>tSNE</th>
+      <th>H5AD location</th>
+      <th>Isolation</th>
+      <th>BC --&gt; Cell ID _OR_ BC --&gt; Cluster ID</th>
+      <th>Number individuals</th>
+      <th>Record breaker</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>9</th>
+      <td>Tang et al NMeth</td>
+      <td>10.1038/NMETH.1315</td>
+      <td>Fuchou Tang, Catalin Barbacioru, Yangzhou Wang...</td>
+      <td>Nat Methods</td>
+      <td>mRNA-Seq whole-transcriptome analysis of a sin...</td>
+      <td>2009-04-06</td>
+      <td>-</td>
+      <td>5.0</td>
+      <td>Mouse</td>
+      <td>Oocyte</td>
+      <td>...</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>Pipetting (Manual picking)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Tang et al CSC</td>
+      <td>10.1016/j.stem.2010.03.015</td>
+      <td>Fuchou Tang, Catalin Barbacioru, Siqin Bao, Ca...</td>
+      <td>Cell Stem Cell</td>
+      <td>Tracing the Derivation of Embryonic Stem Cells...</td>
+      <td>2010-05-07</td>
+      <td>-</td>
+      <td>34.0</td>
+      <td>Mouse</td>
+      <td>Embryo</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Islam et al GR</td>
+      <td>10.1101/gr.110882.110</td>
+      <td>S. Islam, U. Kjallquist, A. Moliner, P. Zajac,...</td>
+      <td>Genome Research</td>
+      <td>Characterization of the single-cell transcript...</td>
+      <td>2011-05-05</td>
+      <td>-</td>
+      <td>85.0</td>
+      <td>Mouse</td>
+      <td>Culture</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>Pipetting (Manual picking)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Hashimshony et al CR</td>
+      <td>10.1016/j.celrep.2012.08.003</td>
+      <td>Tamar Hashimshony, Florian Wagner, Noa Sher, I...</td>
+      <td>Cell Reports</td>
+      <td>CEL-Seq: Single-Cell RNA-Seq by Multiplexed Li...</td>
+      <td>2012-08-30</td>
+      <td>-</td>
+      <td>96.0</td>
+      <td>C elegans</td>
+      <td>Embryo</td>
+      <td>...</td>
+      <td>No</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>Pipetting (Manual picking)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Yan et al NSMB</td>
+      <td>10.1038/nsmb.2660</td>
+      <td>Liying Yan, Mingyu Yang, Hongshan Guo, Lu Yang...</td>
+      <td>Nat Struct Mol Biol</td>
+      <td>Single-cell RNA-Seq profiling of human preimpl...</td>
+      <td>2013-08-09</td>
+      <td>-</td>
+      <td>124.0</td>
+      <td>Human</td>
+      <td>Culture</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Islam et al NMeth</td>
+      <td>10.1038/nmeth.2772</td>
+      <td>Saiful Islam, Amit Zeisel, Simon Joost, Gioele...</td>
+      <td>Nat Methods</td>
+      <td>Quantitative single-cell RNA-seq with unique m...</td>
+      <td>2013-12-22</td>
+      <td>-</td>
+      <td>192.0</td>
+      <td>Mouse</td>
+      <td>Culture</td>
+      <td>...</td>
+      <td>No</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>IFC Capture</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Deng et al Science</td>
+      <td>10.1126/science.1245316</td>
+      <td>Q. Deng, D. Ramskold, B. Reinius, R. Sandberg</td>
+      <td>Science</td>
+      <td>Single-Cell RNA-Seq Reveals Dynamic, Random Mo...</td>
+      <td>2014-01-09</td>
+      <td>-</td>
+      <td>269.0</td>
+      <td>Mouse</td>
+      <td>Embryo</td>
+      <td>...</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Jaitin et al Science</td>
+      <td>10.1126/science.1247651</td>
+      <td>D. A. Jaitin, E. Kenigsberg, H. Keren-Shaul, N...</td>
+      <td>Science</td>
+      <td>Massively Parallel Single-Cell RNA-Seq for Mar...</td>
+      <td>2014-02-14</td>
+      <td>-</td>
+      <td>4468.0</td>
+      <td>Mouse</td>
+      <td>Spleen</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>Sorting (FACS)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Soumillon et al bioRxiv</td>
+      <td>10.1101/003236</td>
+      <td>Magali Soumillon, Davide Cacchiarelli, Stefan ...</td>
+      <td>bioRxiv</td>
+      <td>Characterization of directed differentiation b...</td>
+      <td>2014-03-10</td>
+      <td>10.1101/003236</td>
+      <td>12832.0</td>
+      <td>Human</td>
+      <td>Culture</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>Fan et al Science</td>
+      <td>10.1126/science.1258367</td>
+      <td>H. Christina Fan, Glenn K. Fu, Stephen P. A. F...</td>
+      <td>Science</td>
+      <td>Combinatorial labeling of single cells for gen...</td>
+      <td>2015-02-05</td>
+      <td>-</td>
+      <td>15000.0</td>
+      <td>Human</td>
+      <td>Blood, Culture</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>Picowell deposition</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>Macosko et al Cell</td>
+      <td>10.1016/j.cell.2015.05.002</td>
+      <td>Evan Z. Macosko, Anindita Basu, Rahul Satija, ...</td>
+      <td>Cell</td>
+      <td>Highly Parallel Genome-wide Expression Profili...</td>
+      <td>2015-05-21</td>
+      <td>-</td>
+      <td>44808.0</td>
+      <td>Human, Mouse</td>
+      <td>Eye</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>Nanodroplet dilution</td>
+      <td>SCP301</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>176</th>
+      <td>Adamson et al Cell</td>
+      <td>10.1016/j.cell.2016.11.048</td>
+      <td>Britt Adamson, Thomas M. Norman, Marco Jost, M...</td>
+      <td>Cell</td>
+      <td>A Multiplexed Single-Cell CRISPR Screening Pla...</td>
+      <td>2016-12-15</td>
+      <td>-</td>
+      <td>86000.0</td>
+      <td>Human</td>
+      <td>Culture</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>178</th>
+      <td>Dixit et al Cell</td>
+      <td>10.1016/j.cell.2016.11.038</td>
+      <td>Atray Dixit, Oren Parnas, Biyu Li, Jenny Chen,...</td>
+      <td>Cell</td>
+      <td>Perturb-Seq: Dissecting Molecular Circuits wit...</td>
+      <td>2016-12-15</td>
+      <td>-</td>
+      <td>200000.0</td>
+      <td>Human, Mouse</td>
+      <td>Culture</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>Nanodroplet dilution</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>187</th>
+      <td>Zheng et al NComm</td>
+      <td>10.1038/ncomms14049</td>
+      <td>Grace X. Y. Zheng, Jessica M. Terry, Phillip B...</td>
+      <td>Nat Commun</td>
+      <td>Massively parallel digital transcriptional pro...</td>
+      <td>2017-01-16</td>
+      <td>10.1101/065912</td>
+      <td>250000.0</td>
+      <td>Human, Mouse</td>
+      <td>Blood</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>Nanodroplet dilution</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>311</th>
+      <td>Han et al Cell</td>
+      <td>10.1016/j.cell.2018.02.001</td>
+      <td>Xiaoping Han, Renying Wang, Yincong Zhou, Liji...</td>
+      <td>Cell</td>
+      <td>Mapping the Mouse Cell Atlas by Microwell-Seq</td>
+      <td>2018-02-23</td>
+      <td>-</td>
+      <td>400000.0</td>
+      <td>Mouse</td>
+      <td>Bladder, Bone marrow, Brain, Kidney, Liver, Lu...</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>399</th>
+      <td>Zeisel et al Cell</td>
+      <td>10.1016/j.cell.2018.06.021</td>
+      <td>Amit Zeisel, Hannah Hochgerner, Peter Lönnerbe...</td>
+      <td>Cell</td>
+      <td>Molecular Architecture of the Mouse Nervous Sy...</td>
+      <td>2018-08-09</td>
+      <td>10.1101/294918</td>
+      <td>509876.0</td>
+      <td>Mouse</td>
+      <td>Brain</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>400</th>
+      <td>Saunders et al Cell</td>
+      <td>10.1016/j.cell.2018.07.028</td>
+      <td>Arpiar Saunders, Evan Z. Macosko, Alec Wysoker...</td>
+      <td>Cell</td>
+      <td>Molecular Diversity and Specializations among ...</td>
+      <td>2018-08-09</td>
+      <td>10.1101/299081</td>
+      <td>690000.0</td>
+      <td>Mouse</td>
+      <td>Brain</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>gs://h5ad/2018-08-Saunders-et-al-Cell</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>469</th>
+      <td>Schmeidel et al Cell</td>
+      <td>10.1016/j.cell.2018.10.022</td>
+      <td>Benjamin J. Schmiedel, Divya Singh, Ariel Madr...</td>
+      <td>Cell</td>
+      <td>Impact of Genetic Polymorphisms on Human Immun...</td>
+      <td>2018-11-15</td>
+      <td>NaN</td>
+      <td>1000000.0</td>
+      <td>Human</td>
+      <td>Blood</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>91.0</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>548</th>
+      <td>Cao et al Nature</td>
+      <td>10.1038/s41586-019-0969-x</td>
+      <td>Junyue Cao, Malte Spielmann, Xiaojie Qiu, Xing...</td>
+      <td>Nature</td>
+      <td>The single-cell transcriptional landscape of m...</td>
+      <td>2019-02-20</td>
+      <td>-</td>
+      <td>2058652.0</td>
+      <td>Mouse</td>
+      <td>Embryo</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://storage.googleapis.com/h5ad/2019-02-Ca...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>579</th>
+      <td>Rodriques et al Science</td>
+      <td>10.1126/science.aaw1219</td>
+      <td>Samuel G. Rodriques, Robert R. Stickels, Aleks...</td>
+      <td>Science</td>
+      <td>Slide-seq: A scalable technology for measuring...</td>
+      <td>2019-03-28</td>
+      <td>10.1101/563395</td>
+      <td>2522640.0</td>
+      <td>Mouse</td>
+      <td>Brain</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://storage.googleapis.com/h5ad/2019-03-Ro...</td>
+      <td>Spatial RNA coordinates</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1288</th>
+      <td>Cao et al Science</td>
+      <td>10.1126/science.aba7721</td>
+      <td>Junyue Cao, Diana R. O’Day, Hannah A. Pliner, ...</td>
+      <td>Science</td>
+      <td>A human cell atlas of fetal gene expression</td>
+      <td>2020-11-13</td>
+      <td>NaN</td>
+      <td>4062980.0</td>
+      <td>Human</td>
+      <td>Adrenal gland, Brain, Eye, Heart, Intestine, K...</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>https://storage.googleapis.com/h5ad/10.1126-sc...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>121.0</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+<p>21 rows × 29 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.columns
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Shorthand&#39;, &#39;DOI&#39;, &#39;Authors&#39;, &#39;Journal&#39;, &#39;Title&#39;, &#39;Date&#39;,
+       &#39;bioRxiv DOI&#39;, &#39;Reported cells total&#39;, &#39;Organism&#39;, &#39;Tissue&#39;,
+       &#39;Technique&#39;, &#39;Data location&#39;, &#39;Panel size&#39;, &#39;Measurement&#39;,
+       &#39;Cell source&#39;, &#39;Disease&#39;, &#39;Contrasts&#39;, &#39;Developmental stage&#39;,
+       &#39;Number of reported cell types or clusters&#39;, &#39;Cell clustering&#39;,
+       &#39;Pseudotime&#39;, &#39;RNA Velocity&#39;, &#39;PCA&#39;, &#39;tSNE&#39;, &#39;H5AD location&#39;,
+       &#39;Isolation&#39;, &#39;BC --&gt; Cell ID _OR_ BC --&gt; Cluster ID&#39;,
+       &#39;Number individuals&#39;, &#39;Record breaker&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.shape
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1649, 29)
 </pre></div>
 </div>
 </div>
