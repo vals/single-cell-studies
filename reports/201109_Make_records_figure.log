@@ -17,16 +17,9 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-url = "http://nxn.se/single-cell-studies/data.tsv"
-df = pd.read_csv(url, sep='\t')
-
-# converts string to date format, can only be run once!
-df['Date'] = pd.to_datetime(df['Date'], format='%Y%m%d')
-
-# converts string of reported cells total to float, can only be run once!
-df['Reported cells total'] = df['Reported cells total'].str.replace(',', '').map(float)
-
-print(df.shape)
+data = pd.read_csv('https://nxn.se/single-cell-studies/data.tsv', sep='\t')
+data['Date'] = data['Date'].pipe(pd.to_datetime, format='%Y%m%d')
+data['Reported cells total'] = data['Reported cells total'].str.replace(',', '').map(float)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
@@ -49,12 +42,10 @@ File [0;32mpandas/_libs/hashtable_class_helper.pxi:5753[0m, in [0;36mpandas._
 The above exception was the direct cause of the following exception:
 
 [0;31mKeyError[0m                                  Traceback (most recent call last)
-Cell [0;32mIn[2], line 5[0m
-[1;32m      2[0m df [38;5;241m=[39m pd[38;5;241m.[39mread_csv(url, sep[38;5;241m=[39m[38;5;124m'[39m[38;5;130;01m\t[39;00m[38;5;124m'[39m)
-[1;32m      4[0m [38;5;66;03m# converts string to date format, can only be run once![39;00m
-[0;32m----> 5[0m df[[38;5;124m'[39m[38;5;124mDate[39m[38;5;124m'[39m] [38;5;241m=[39m pd[38;5;241m.[39mto_datetime([43mdf[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mDate[39;49m[38;5;124;43m'[39;49m[43m][49m, [38;5;28mformat[39m[38;5;241m=[39m[38;5;124m'[39m[38;5;124m%[39m[38;5;124mY[39m[38;5;124m%[39m[38;5;124mm[39m[38;5;132;01m%d[39;00m[38;5;124m'[39m)
-[1;32m      7[0m [38;5;66;03m# converts string of reported cells total to float, can only be run once![39;00m
-[1;32m      8[0m df[[38;5;124m'[39m[38;5;124mReported cells total[39m[38;5;124m'[39m] [38;5;241m=[39m df[[38;5;124m'[39m[38;5;124mReported cells total[39m[38;5;124m'[39m][38;5;241m.[39mstr[38;5;241m.[39mreplace([38;5;124m'[39m[38;5;124m,[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m'[39m)[38;5;241m.[39mmap([38;5;28mfloat[39m)
+Cell [0;32mIn[2], line 2[0m
+[1;32m      1[0m data [38;5;241m=[39m pd[38;5;241m.[39mread_csv([38;5;124m'[39m[38;5;124mhttps://nxn.se/single-cell-studies/data.tsv[39m[38;5;124m'[39m, sep[38;5;241m=[39m[38;5;124m'[39m[38;5;130;01m\t[39;00m[38;5;124m'[39m)
+[0;32m----> 2[0m data[[38;5;124m'[39m[38;5;124mDate[39m[38;5;124m'[39m] [38;5;241m=[39m [43mdata[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mDate[39;49m[38;5;124;43m'[39;49m[43m][49m[38;5;241m.[39mpipe(pd[38;5;241m.[39mto_datetime, [38;5;28mformat[39m[38;5;241m=[39m[38;5;124m'[39m[38;5;124m%[39m[38;5;124mY[39m[38;5;124m%[39m[38;5;124mm[39m[38;5;132;01m%d[39;00m[38;5;124m'[39m)
+[1;32m      3[0m data[[38;5;124m'[39m[38;5;124mReported cells total[39m[38;5;124m'[39m] [38;5;241m=[39m data[[38;5;124m'[39m[38;5;124mReported cells total[39m[38;5;124m'[39m][38;5;241m.[39mstr[38;5;241m.[39mreplace([38;5;124m'[39m[38;5;124m,[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m'[39m)[38;5;241m.[39mmap([38;5;28mfloat[39m)
 
 File [0;32m/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pandas/core/frame.py:3807[0m, in [0;36mDataFrame.__getitem__[0;34m(self, key)[0m
 [1;32m   3805[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mcolumns[38;5;241m.[39mnlevels [38;5;241m>[39m [38;5;241m1[39m:
