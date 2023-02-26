@@ -1,6 +1,6 @@
 adjustText
 mizani
-matplotlib<=3.5.3
+matplotlib
 numpy
 openpyxl
 pandas
