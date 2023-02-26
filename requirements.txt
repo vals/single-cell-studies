@@ -1,6 +1,8 @@
+adjustText
 mizani
-matplotlib
-pandas
+matplotlib<=3.5.3
 numpy
+openpyxl
+pandas
 plotnine
 statsmodels
