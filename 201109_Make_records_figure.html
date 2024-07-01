@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
@@ -37,9 +37,9 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -138,6 +138,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="README.html">
   
@@ -153,7 +155,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -331,10 +333,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -342,7 +344,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -1127,276 +1129,10 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/layer.py:364: PlotnineWarning: geom_point : Removed 400 rows containing missing values.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/IPython/core/formatters.py:925,</span> in <span class="ni">IPythonDisplayFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">923</span> <span class="n">method</span> <span class="o">=</span> <span class="n">get_real_method</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">print_method</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">924</span> <span class="k">if</span> <span class="n">method</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">925</span>     <span class="n">method</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">926</span>     <span class="k">return</span> <span class="kc">True</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/ggplot.py:141,</span> in <span class="ni">ggplot._ipython_display_</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">134</span> <span class="k">def</span> <span class="nf">_ipython_display_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">135</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span><span class="sd">     Display plot in the output of the cell</span>
-<span class="g g-Whitespace">    </span><span class="mi">137</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">138</span><span class="sd">     This method will always be called when a ggplot object is the</span>
-<span class="g g-Whitespace">    </span><span class="mi">139</span><span class="sd">     last in the cell.</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">141</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_display</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/ggplot.py:175,</span> in <span class="ni">ggplot._display</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">172</span>     <span class="n">save_format</span> <span class="o">=</span> <span class="s2">&quot;png&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">174</span> <span class="n">buf</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">175</span> <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">save_format</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span> <span class="n">display_func</span> <span class="o">=</span> <span class="n">get_display_function</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">177</span> <span class="n">display_func</span><span class="p">(</span><span class="n">buf</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/ggplot.py:663,</span> in <span class="ni">ggplot.save</span><span class="nt">(self, filename, format, path, width, height, units, dpi, limitsize, verbose, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">615</span> <span class="k">def</span> <span class="nf">save</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">616</span>     <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">617</span>     <span class="n">filename</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span> <span class="o">|</span> <span class="n">BytesIO</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">626</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">627</span> <span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">628</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">629</span><span class="sd">     Save a ggplot object as an image file</span>
-<span class="g g-Whitespace">    </span><span class="mi">630</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">661</span><span class="sd">         Additional arguments to pass to matplotlib `savefig()`.</span>
-<span class="g g-Whitespace">    </span><span class="mi">662</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">663</span>     <span class="n">sv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">save_helper</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">664</span>         <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">665</span>         <span class="nb">format</span><span class="o">=</span><span class="nb">format</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">666</span>         <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">667</span>         <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">668</span>         <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">669</span>         <span class="n">units</span><span class="o">=</span><span class="n">units</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">670</span>         <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">671</span>         <span class="n">limitsize</span><span class="o">=</span><span class="n">limitsize</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">672</span>         <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">673</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">674</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">676</span>     <span class="k">with</span> <span class="n">plot_context</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">rc_context</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">677</span>         <span class="n">sv</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="o">**</span><span class="n">sv</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/ggplot.py:612,</span> in <span class="ni">ggplot.save_helper</span><span class="nt">(self, filename, format, path, width, height, units, dpi, limitsize, verbose, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">609</span> <span class="k">if</span> <span class="n">dpi</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">610</span>     <span class="bp">self</span><span class="o">.</span><span class="n">theme</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theme</span> <span class="o">+</span> <span class="n">theme</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">612</span> <span class="n">figure</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span> <span class="k">return</span> <span class="n">mpl_save_view</span><span class="p">(</span><span class="n">figure</span><span class="p">,</span> <span class="n">fig_kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/ggplot.py:280,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">277</span> <span class="bp">self</span><span class="o">.</span><span class="n">theme</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span> <span class="c1"># Drawing</span>
-<span class="ne">--&gt; </span><span class="mi">280</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draw_layers</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draw_panel_borders</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draw_breaks_and_labels</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/ggplot.py:444,</span> in <span class="ni">ggplot._draw_layers</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">440</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">441</span><span class="sd"> Draw the main plot(s) onto the axes.</span>
-<span class="g g-Whitespace">    </span><span class="mi">442</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">443</span> <span class="c1"># Draw the geoms</span>
-<span class="ne">--&gt; </span><span class="mi">444</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/layer.py:453,</span> in <span class="ni">Layers.draw</span><span class="nt">(self, layout, coord)</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">452</span>     <span class="n">l</span><span class="o">.</span><span class="n">zorder</span> <span class="o">=</span> <span class="n">i</span>
-<span class="ne">--&gt; </span><span class="mi">453</span>     <span class="n">l</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">layout</span><span class="p">,</span> <span class="n">coord</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/layer.py:367,</span> in <span class="ni">layer.draw</span><span class="nt">(self, layout, coord)</span>
-<span class="g g-Whitespace">    </span><span class="mi">364</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">handle_na</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">365</span> <span class="c1"># At this point each layer must have the data</span>
-<span class="g g-Whitespace">    </span><span class="mi">366</span> <span class="c1"># that is created by the plot build process</span>
-<span class="ne">--&gt; </span><span class="mi">367</span> <span class="bp">self</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">draw_layer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/geoms/geom.py:289,</span> in <span class="ni">geom.draw_layer</span><span class="nt">(self, data, layout, coord, **params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span> <span class="n">panel_params</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">panel_params</span><span class="p">[</span><span class="n">ploc</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">288</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">axs</span><span class="p">[</span><span class="n">ploc</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">289</span> <span class="bp">self</span><span class="o">.</span><span class="n">draw_panel</span><span class="p">(</span><span class="n">pdata</span><span class="p">,</span> <span class="n">panel_params</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/geoms/geom_text.py:184,</span> in <span class="ni">geom_text.draw_panel</span><span class="nt">(self, data, panel_params, coord, ax, **params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span> <span class="k">def</span> <span class="nf">draw_panel</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">177</span>     <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span>     <span class="n">data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>     <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span> <span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">184</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">draw_panel</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">panel_params</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/geoms/geom.py:331,</span> in <span class="ni">geom.draw_panel</span><span class="nt">(self, data, panel_params, coord, ax, **params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">gdata</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="n">gdata</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">331</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw_group</span><span class="p">(</span><span class="n">gdata</span><span class="p">,</span> <span class="n">panel_params</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/geoms/geom_text.py:271,</span> in <span class="ni">geom_text.draw_group</span><span class="nt">(data, panel_params, coord, ax, **params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span> <span class="k">if</span> <span class="s2">&quot;mutation_scale&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">arrowprops</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span>     <span class="n">arrowprops</span><span class="p">[</span><span class="s2">&quot;mutation_scale&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">271</span> <span class="n">adjust_text</span><span class="p">(</span><span class="n">texts</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">arrowprops</span><span class="o">=</span><span class="n">arrowprops</span><span class="p">,</span> <span class="o">**</span><span class="n">_adjust</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/adjustText/__init__.py:557,</span> in <span class="ni">adjust_text</span><span class="nt">(texts, x, y, objects, target_x, target_y, avoid_self, force_text, force_static, force_pull, force_explode, pull_threshold, expand, explode_radius, ensure_inside_axes, expand_axes, only_move, ax, min_arrow_len, time_lim, iter_lim, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">552</span>         <span class="n">explode_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">explode_y</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">553</span>     <span class="n">coords</span> <span class="o">=</span> <span class="n">apply_shifts</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">554</span>         <span class="n">coords</span><span class="p">,</span> <span class="o">-</span><span class="n">explode_x</span> <span class="o">*</span> <span class="n">force_explode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="n">explode_y</span> <span class="o">*</span> <span class="n">force_explode</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">555</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">557</span> <span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span>
-<span class="g g-Whitespace">    </span><span class="mi">559</span> <span class="c1"># i_0 = 100</span>
-<span class="g g-Whitespace">    </span><span class="mi">560</span> <span class="c1"># i = i_0</span>
-<span class="g g-Whitespace">    </span><span class="mi">561</span> <span class="c1"># expand_start = 1.05, 1.5</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">565</span> <span class="c1"># expands = list(zip(np.linspace(expand_start[0], expand_end[0], expand_steps),</span>
-<span class="g g-Whitespace">    </span><span class="mi">566</span> <span class="c1">#                 np.linspace(expand_start[1], expand_end[1], expand_steps)))</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span> <span class="k">if</span> <span class="n">ensure_inside_axes</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/__init__.py:397,</span> in <span class="ni">__getattr__</span><span class="nt">(attr)</span>
-<span class="g g-Whitespace">    </span><span class="mi">394</span>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="n">__former_attrs__</span><span class="p">[</span><span class="n">attr</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">396</span> <span class="k">if</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">__expired_attributes__</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">397</span>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">398</span>         <span class="sa">f</span><span class="s2">&quot;`np.</span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s2">` was removed in the NumPy 2.0 release. &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">399</span>         <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">__expired_attributes__</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">400</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">402</span> <span class="k">if</span> <span class="n">attr</span> <span class="o">==</span> <span class="s2">&quot;chararray&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">403</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">404</span>         <span class="s2">&quot;`np.chararray` is deprecated and will be removed from &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">405</span>         <span class="s2">&quot;the main namespace in the future. Use an array with a string &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">406</span>         <span class="s2">&quot;or bytes dtype instead.&quot;</span><span class="p">,</span> <span class="ne">DeprecationWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: `np.Inf` was removed in the NumPy 2.0 release. Use `np.inf` instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looks like you are using a tranform that doesn&#39;t support FancyArrowPatch, using ax.annotate instead. The arrows might strike through texts. Increasing shrinkA in arrowprops might help.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/IPython/lib/pretty.py:779: FutureWarning: Using repr(plot) to draw and show the plot figure is deprecated and will be removed in a future version. Use plot.show().
-/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/layer.py:364: PlotnineWarning: geom_point : Removed 400 rows containing missing values.
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/IPython/core/formatters.py:711,</span> in <span class="ni">PlainTextFormatter.__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">pretty</span><span class="o">.</span><span class="n">RepresentationPrinter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="bp">self</span><span class="o">.</span><span class="n">max_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">max_seq_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_seq_length</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">708</span>     <span class="n">singleton_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">singleton_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span>     <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span>     <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">711</span> <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">712</span> <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">713</span> <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/IPython/lib/pretty.py:411,</span> in <span class="ni">RepresentationPrinter.pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span>                         <span class="k">return</span> <span class="n">meth</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">409</span>                 <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">410</span>                         <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">411</span>                     <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span>     <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">414</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/IPython/lib/pretty.py:779,</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">778</span> <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">779</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">781</span> <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/ggplot.py:131,</span> in <span class="ni">ggplot.__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">125</span> <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">126</span>     <span class="s2">&quot;Using repr(plot) to draw and show the plot figure is &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">127</span>     <span class="s2">&quot;deprecated and will be removed in a future version. &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span>     <span class="s2">&quot;Use plot.show().&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">129</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">130</span> <span class="n">warn</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">131</span> <span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">132</span> <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;Figure Size: (</span><span class="si">{</span><span class="n">W</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="n">H</span><span class="si">}</span><span class="s2">)&gt;&quot;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/ggplot.py:150,</span> in <span class="ni">ggplot.show</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span> <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">144</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">145</span><span class="sd">     Show plot using the matplotlib backend set by the user</span>
-<span class="g g-Whitespace">    </span><span class="mi">146</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">147</span><span class="sd">     Users should prefer this method instead of printing or repring</span>
-<span class="g g-Whitespace">    </span><span class="mi">148</span><span class="sd">     the object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">149</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">150</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_display</span><span class="p">()</span> <span class="k">if</span> <span class="n">is_inline_backend</span><span class="p">()</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/ggplot.py:280,</span> in <span class="ni">ggplot.draw</span><span class="nt">(self, show)</span>
-<span class="g g-Whitespace">    </span><span class="mi">277</span> <span class="bp">self</span><span class="o">.</span><span class="n">theme</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span> <span class="c1"># Drawing</span>
-<span class="ne">--&gt; </span><span class="mi">280</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draw_layers</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draw_panel_borders</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draw_breaks_and_labels</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/ggplot.py:444,</span> in <span class="ni">ggplot._draw_layers</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">440</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">441</span><span class="sd"> Draw the main plot(s) onto the axes.</span>
-<span class="g g-Whitespace">    </span><span class="mi">442</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">443</span> <span class="c1"># Draw the geoms</span>
-<span class="ne">--&gt; </span><span class="mi">444</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/layer.py:453,</span> in <span class="ni">Layers.draw</span><span class="nt">(self, layout, coord)</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">452</span>     <span class="n">l</span><span class="o">.</span><span class="n">zorder</span> <span class="o">=</span> <span class="n">i</span>
-<span class="ne">--&gt; </span><span class="mi">453</span>     <span class="n">l</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">layout</span><span class="p">,</span> <span class="n">coord</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/layer.py:367,</span> in <span class="ni">layer.draw</span><span class="nt">(self, layout, coord)</span>
-<span class="g g-Whitespace">    </span><span class="mi">364</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">handle_na</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">365</span> <span class="c1"># At this point each layer must have the data</span>
-<span class="g g-Whitespace">    </span><span class="mi">366</span> <span class="c1"># that is created by the plot build process</span>
-<span class="ne">--&gt; </span><span class="mi">367</span> <span class="bp">self</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">draw_layer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/geoms/geom.py:289,</span> in <span class="ni">geom.draw_layer</span><span class="nt">(self, data, layout, coord, **params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span> <span class="n">panel_params</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">panel_params</span><span class="p">[</span><span class="n">ploc</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">288</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">axs</span><span class="p">[</span><span class="n">ploc</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">289</span> <span class="bp">self</span><span class="o">.</span><span class="n">draw_panel</span><span class="p">(</span><span class="n">pdata</span><span class="p">,</span> <span class="n">panel_params</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/geoms/geom_text.py:184,</span> in <span class="ni">geom_text.draw_panel</span><span class="nt">(self, data, panel_params, coord, ax, **params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span> <span class="k">def</span> <span class="nf">draw_panel</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">177</span>     <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span>     <span class="n">data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>     <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span> <span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">184</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">draw_panel</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">panel_params</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/geoms/geom.py:331,</span> in <span class="ni">geom.draw_panel</span><span class="nt">(self, data, panel_params, coord, ax, **params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">gdata</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="n">gdata</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">331</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw_group</span><span class="p">(</span><span class="n">gdata</span><span class="p">,</span> <span class="n">panel_params</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/plotnine/geoms/geom_text.py:271,</span> in <span class="ni">geom_text.draw_group</span><span class="nt">(data, panel_params, coord, ax, **params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span> <span class="k">if</span> <span class="s2">&quot;mutation_scale&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">arrowprops</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span>     <span class="n">arrowprops</span><span class="p">[</span><span class="s2">&quot;mutation_scale&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">271</span> <span class="n">adjust_text</span><span class="p">(</span><span class="n">texts</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">arrowprops</span><span class="o">=</span><span class="n">arrowprops</span><span class="p">,</span> <span class="o">**</span><span class="n">_adjust</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/adjustText/__init__.py:557,</span> in <span class="ni">adjust_text</span><span class="nt">(texts, x, y, objects, target_x, target_y, avoid_self, force_text, force_static, force_pull, force_explode, pull_threshold, expand, explode_radius, ensure_inside_axes, expand_axes, only_move, ax, min_arrow_len, time_lim, iter_lim, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">552</span>         <span class="n">explode_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">explode_y</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">553</span>     <span class="n">coords</span> <span class="o">=</span> <span class="n">apply_shifts</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">554</span>         <span class="n">coords</span><span class="p">,</span> <span class="o">-</span><span class="n">explode_x</span> <span class="o">*</span> <span class="n">force_explode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="n">explode_y</span> <span class="o">*</span> <span class="n">force_explode</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">555</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">557</span> <span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span>
-<span class="g g-Whitespace">    </span><span class="mi">559</span> <span class="c1"># i_0 = 100</span>
-<span class="g g-Whitespace">    </span><span class="mi">560</span> <span class="c1"># i = i_0</span>
-<span class="g g-Whitespace">    </span><span class="mi">561</span> <span class="c1"># expand_start = 1.05, 1.5</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">565</span> <span class="c1"># expands = list(zip(np.linspace(expand_start[0], expand_end[0], expand_steps),</span>
-<span class="g g-Whitespace">    </span><span class="mi">566</span> <span class="c1">#                 np.linspace(expand_start[1], expand_end[1], expand_steps)))</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span> <span class="k">if</span> <span class="n">ensure_inside_axes</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/__init__.py:397,</span> in <span class="ni">__getattr__</span><span class="nt">(attr)</span>
-<span class="g g-Whitespace">    </span><span class="mi">394</span>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="n">__former_attrs__</span><span class="p">[</span><span class="n">attr</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">396</span> <span class="k">if</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">__expired_attributes__</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">397</span>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">398</span>         <span class="sa">f</span><span class="s2">&quot;`np.</span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s2">` was removed in the NumPy 2.0 release. &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">399</span>         <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">__expired_attributes__</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">400</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">402</span> <span class="k">if</span> <span class="n">attr</span> <span class="o">==</span> <span class="s2">&quot;chararray&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">403</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">404</span>         <span class="s2">&quot;`np.chararray` is deprecated and will be removed from &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">405</span>         <span class="s2">&quot;the main namespace in the future. Use an array with a string &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">406</span>         <span class="s2">&quot;or bytes dtype instead.&quot;</span><span class="p">,</span> <span class="ne">DeprecationWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: `np.Inf` was removed in the NumPy 2.0 release. Use `np.inf` instead.
-</pre></div>
-</div>
+<a class="reference internal image-reference" href="_images/eb8fc5416053b119d7c8ccc61fab65e0d3ce9425ecf93374f54d003c05abb817.png"><img alt="_images/eb8fc5416053b119d7c8ccc61fab65e0d3ce9425ecf93374f54d003c05abb817.png" src="_images/eb8fc5416053b119d7c8ccc61fab65e0d3ce9425ecf93374f54d003c05abb817.png" style="width: 2000px; height: 700px;" /></a>
 </div>
 </div>
 </section>
@@ -1490,8 +1226,8 @@ By Valentine Svensson
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
