@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -364,14 +364,14 @@
 <h1>Make plot highlighting record datasets over time<a class="headerlink" href="#make-plot-highlighting-record-datasets-over-time" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mizani.formatters</span> <span class="kn">import</span> <span class="n">comma_format</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">plotnine</span> <span class="k">as</span> <span class="nn">p</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">mizani.formatters</span><span class="w"> </span><span class="kn">import</span> <span class="n">comma_format</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotnine</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">p</span>
 
 <span class="o">%</span><span class="k">pylab</span> inline
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_formats = [&#39;retina&#39;]
 
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 </pre></div>
 </div>
 </div>
@@ -1009,7 +1009,7 @@ Populating the interactive namespace from numpy and matplotlib
       <td>True</td>
     </tr>
     <tr>
-      <th>1802</th>
+      <th>1805</th>
       <td>Zhang et al Science</td>
       <td>10.1126/science.adn3949</td>
       <td>Zehao Zhang, Chloe Schaefer, Weirong Jiang, Zi...</td>
@@ -1064,7 +1064,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1804, 29)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1808, 29)
 </pre></div>
 </div>
 </div>
@@ -1098,7 +1098,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.15/x64/lib/python3.10/site-packages/plotnine/layer.py:364: PlotnineWarning: geom_point : Removed 401 rows containing missing values.
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/a3e78c4d7464b1708b318ce82dd4001575cb100d4a62ccffe11955cbec42b5e1.png"><img alt="_images/a3e78c4d7464b1708b318ce82dd4001575cb100d4a62ccffe11955cbec42b5e1.png" src="_images/a3e78c4d7464b1708b318ce82dd4001575cb100d4a62ccffe11955cbec42b5e1.png" style="width: 2000px; height: 700px;" /></a>
+<a class="reference internal image-reference" href="_images/fcac915ccd1faf582135719b2bcbbe413833df8e58e57b25427df1648ab5ed5b.png"><img alt="_images/fcac915ccd1faf582135719b2bcbbe413833df8e58e57b25427df1648ab5ed5b.png" src="_images/fcac915ccd1faf582135719b2bcbbe413833df8e58e57b25427df1648ab5ed5b.png" style="width: 2000px; height: 700px;" /></a>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1142,7 +1142,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looks like you are using a tranform that doesn&#39;t support FancyArrowPatch, using ax.annotate instead. The arrows might strike through texts. Increasing shrinkA in arrowprops might help.
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/2487ef06f47ebd5be106f9148d516eac6948529af880750a61da9e025c7be7a0.png"><img alt="_images/2487ef06f47ebd5be106f9148d516eac6948529af880750a61da9e025c7be7a0.png" src="_images/2487ef06f47ebd5be106f9148d516eac6948529af880750a61da9e025c7be7a0.png" style="width: 2000px; height: 700px;" /></a>
+<a class="reference internal image-reference" href="_images/85c0f6f9c89d643373dac0430c2aae5b6c8a95be71bdf314a6391f11616dcc67.png"><img alt="_images/85c0f6f9c89d643373dac0430c2aae5b6c8a95be71bdf314a6391f11616dcc67.png" src="_images/85c0f6f9c89d643373dac0430c2aae5b6c8a95be71bdf314a6391f11616dcc67.png" style="width: 2000px; height: 700px;" /></a>
 </div>
 </div>
 </section>

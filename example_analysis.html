@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -384,24 +384,24 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %pylab inline</span>
 <span class="c1"># %config InlineBackend.figure_format = &#39;retina&#39;</span>
 
-<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
 
-<span class="kn">import</span> <span class="nn">matplotlib.font_manager</span>
-<span class="kn">from</span> <span class="nn">mizani.breaks</span> <span class="kn">import</span> <span class="n">date_breaks</span>
-<span class="kn">from</span> <span class="nn">mizani.formatters</span> <span class="kn">import</span> <span class="n">date_format</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.font_manager</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mizani.breaks</span><span class="w"> </span><span class="kn">import</span> <span class="n">date_breaks</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mizani.formatters</span><span class="w"> </span><span class="kn">import</span> <span class="n">date_format</span>
 
 <span class="c1"># Only pandas &gt;= v0.25.0 supports column names with spaces in queries</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span>  <span class="c1"># Alias for pd.Timestamp</span>
-<span class="kn">import</span> <span class="nn">plotnine</span> <span class="k">as</span> <span class="nn">p</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
-<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotnine</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">p</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.formula.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">smf</span>
 
-<span class="kn">import</span> <span class="nn">warnings</span>
-<span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">mplcol</span>
-<span class="kn">import</span> <span class="nn">colorsys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mplcol</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">colorsys</span>
 
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>  <span class="c1"># plotnine has a lot of MatplotlibDeprecationWarning&#39;s</span>
 </pre></div>
@@ -496,7 +496,7 @@
 <span class="g g-Whitespace">    </span><span class="mi">284</span><span class="sd"> Lazy-import wrapper for stdlib urlopen, as that imports a big chunk of</span>
 <span class="g g-Whitespace">    </span><span class="mi">285</span><span class="sd"> the stdlib.</span>
 <span class="g g-Whitespace">    </span><span class="mi">286</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span> <span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span> <span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
 <span class="ne">--&gt; </span><span class="mi">289</span> <span class="k">return</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <span class="nn">File /opt/hostedtoolcache/Python/3.10.15/x64/lib/python3.10/urllib/request.py:216,</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
@@ -531,7 +531,7 @@
 <span class="g g-Whitespace">    </span><span class="mi">498</span>         <span class="k">return</span> <span class="n">result</span>
 
 <span class="nn">File /opt/hostedtoolcache/Python/3.10.15/x64/lib/python3.10/urllib/request.py:643,</span> in <span class="ni">HTTPDefaultErrorHandler.http_error_default</span><span class="nt">(self, req, fp, code, msg, hdrs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">642</span> <span class="k">def</span> <span class="nf">http_error_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">642</span> <span class="k">def</span><span class="w"> </span><span class="nf">http_error_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">643</span>     <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
 
 <span class="ne">HTTPError</span>: HTTP Error 403: Forbidden
@@ -615,7 +615,7 @@ findfont: Font family [&#39;Arial&#39;] not found. Falling back to DejaVu Sans.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lightness</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">lightness</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">lightness</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">lightness</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;Proportionally modulate color.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">rgb</span> <span class="o">=</span> <span class="n">mplcol</span><span class="o">.</span><span class="n">colorConverter</span><span class="o">.</span><span class="n">to_rgb</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
@@ -2339,7 +2339,7 @@ dtype: float64
 
 <span class="n">df_</span><span class="p">[</span><span class="s1">&#39;data_scale&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_</span><span class="p">[</span><span class="s1">&#39;Reported cells total&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">)</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">get_regression_coeff</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_regression_coeff</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
     <span class="n">c</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
         <span class="o">.</span><span class="n">fit</span><span class="p">()</span>
@@ -2348,7 +2348,7 @@ dtype: float64
     
     <span class="k">return</span> <span class="n">c</span>
 
-<span class="k">def</span> <span class="nf">predict_number_celltypes</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">predict_number_celltypes</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
     <span class="n">fit</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
         <span class="o">.</span><span class="n">fit</span><span class="p">()</span>
@@ -2523,7 +2523,7 @@ Name: Tissue_, dtype: int64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">formula</span> <span class="o">=</span> <span class="n">formula</span> <span class="o">=</span> <span class="s1">&#39;np.log(Q(&quot;Number of reported cell types or clusters&quot;)) ~ np.log(Q(&quot;Reported cells total&quot;))&#39;</span>
 
-<span class="k">def</span> <span class="nf">get_coeff_pval</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_coeff_pval</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
     <span class="n">c</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
         <span class="o">.</span><span class="n">fit</span><span class="p">()</span>
